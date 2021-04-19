@@ -1,29 +1,27 @@
 // Complete and add needed car properties:
 const car = {
   speed: 0,
-  tempsDeConduite: 0,
-  distanceParcourus: 0,
+  distance: 0,
   valueOfSpeed: 0,
+
   start: function () {
-    this.tempsDeConduite = 0;
-    this.distanceParcourus = 0;
+    this.speed = 0;
+    this.distance = 0;
     this.valueOfSpeed = 0;
     return this;
   },
   changeSpeed: function (speed) {
-    this.valueOfSpeed = speed;
+    this.speed = speed;
     return this;
   },
   drive: function (minutes) {
-    this.tempsDeConduite = minutes;
-    this.distanceParcourus += (this.valueOfSpeed * this.tempsDeConduite) /60;
+    this.distance += (this.speed * minutes) / 60;
     return this;
   },
   showDistance: function () {
-    console.log(`${this.distanceParcourus} Km`);
+    console.log(`${this.distance} Km`);
     return this;
   },
-
 };
 
 module.exports = car;
