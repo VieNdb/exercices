@@ -66,7 +66,7 @@ export class GameModel {
         return platforms.map((platform) => ({
           name: platform.name,
           slug: platform.slug,
-          cover: platform.cover_url
+          cover: platform.platform_logo_url
         }));
       });
   }

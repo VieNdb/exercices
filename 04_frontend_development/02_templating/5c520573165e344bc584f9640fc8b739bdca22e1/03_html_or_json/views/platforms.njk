@@ -1,7 +1,9 @@
+<h1>Platforms</h1>
 <ul>
   {% for platform in platforms %}
     <li>
-    {{platforms.name}}
+      <img src="{{platform.cover}}">
     </li>
+    <a href="/platforms/{{platform.slug}}">{{platform.name}}</a>
   {% endfor %}
 </ul>

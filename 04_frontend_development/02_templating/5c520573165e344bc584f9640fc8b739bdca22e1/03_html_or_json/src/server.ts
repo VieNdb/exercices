@@ -42,7 +42,6 @@ export function makeApp(gameModel: GameModel): core.Express {
 
   app.get("/platforms", (request, response) => {
     gameModel.getPlatforms().then((platforms) => {
-      console.log(platforms);
       if(clientWantsJson(request)) {
         response.json(platforms);
       } else {
@@ -56,7 +55,13 @@ export function makeApp(gameModel: GameModel): core.Express {
     gameModel
       .findByPlatform(request.params.platform_slug)
       .then((gamesForPlatform) => {
-        response.json(gamesForPlatform);
+        console.log(gamesForPlatform);
+        if(clientWantsJson(request)) {
+          response.json(gamesForPlatform);
+        } else {
+          response.render("platformSlug", { gamesForPlatform });
+        }
+       
       });
   });
 

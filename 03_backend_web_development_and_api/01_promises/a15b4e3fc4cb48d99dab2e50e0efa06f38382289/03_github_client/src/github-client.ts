@@ -12,8 +12,13 @@ export type GitHub = {
 }
 
 export class GithubClient {
-  static getReposUrl() {
+  static getReposUrl(nickname: string): Promise<string> {
     // You code goes here
+    return new Promise((resolve, reject) => {
+      if ((getReposUrlByNickname(nickname)) === ;
+    });
+    
+    return getReposUrlByNickname();
   }
 
   static getRepos() {
@@ -33,3 +38,5 @@ export class GithubClient {
     // You code goes here
   }
 }
+const moi: (string | number)[] = ["ma", "mea", "mia", 4];
+console.log(moi);

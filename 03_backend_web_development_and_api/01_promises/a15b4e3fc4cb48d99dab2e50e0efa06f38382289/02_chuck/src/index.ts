@@ -23,3 +23,4 @@ getCategories()
       });
   })
   .catch((e) => console.warn(e));
+getJoke("dev").then(console.log);
