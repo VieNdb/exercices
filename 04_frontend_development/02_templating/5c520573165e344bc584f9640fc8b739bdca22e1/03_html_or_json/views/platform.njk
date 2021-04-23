@@ -1,0 +1,11 @@
+
+<ul>
+  {% for platform in gamesForPlatform %}
+  <h1>{{platforms.name}}</h1>
+    <li>
+      <img src="{{platform.cover}}">
+      <a href="/games/{{platform.slug}}">{{platform.name}}</a>
+    </li>
+  {% endfor %}
+</ul>
+
