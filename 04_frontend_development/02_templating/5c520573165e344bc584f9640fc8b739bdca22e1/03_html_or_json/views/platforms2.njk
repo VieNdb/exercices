@@ -2,17 +2,17 @@
 {% block content %}
 
 <div class="container">
-</br>
+  </br>
     <div class="title">
-        <h1>{{platforms.name}}</h1> 
+        <h1>Platforms</h1> 
     </div>
   </br>
   <div class="row row-cols-3">
-    {% for platform in gamesForPlatform %}
+    {% for platform in platforms %}
     <div class="col-md-auto">
       <div class="card" style="width: 18rem">
-        <img src="{{platform.cover}}">
-            <a href="/games/{{platform.slug}}">{{platform.name}}</a>
+            <img src="{{platform.cover}}">
+           <a href="/platforms/{{ platform.slug }}">{{ platform.name }}</a>
           </div>
         </div>
     {% endfor %}

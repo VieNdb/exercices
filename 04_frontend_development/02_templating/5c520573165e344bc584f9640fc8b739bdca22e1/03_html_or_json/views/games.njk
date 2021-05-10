@@ -1,9 +1,15 @@
-<h1>Games</h1>
-<ul>
-  {% for game in games %}
-    <li>
-    <img src="{{game.cover}}" alt="">
-    </li>
-    <a href="/games/{{game.slug}}">{{game.name}}</a>
-  {% endfor %}
-</ul>
+{% extends "layout.njk" %}
+
+ {% block content %}
+ </br>
+ <h2>Games</h2>
+ <ul>
+   {% for game in games %}
+     </br>
+     <img src="{{game.cover}}" alt="">
+     </br>
+     <a href="/games/{{game.slug}}">{{game.name}}</a>
+     </br>
+   {% endfor %}
+ </ul>
+ {% endblock %}
