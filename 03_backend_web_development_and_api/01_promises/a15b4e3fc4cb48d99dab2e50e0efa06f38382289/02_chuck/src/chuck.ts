@@ -7,13 +7,8 @@ function getCategories(): Promise<string[]> {
 }
 
 function getJoke(category: string): Promise<string> {
-  const joke = getChuckJoke(category);
-  return new Promise((resolve) => {
-    // réussir une fois sur deux
-    resolve(joke.value);
-    joke.then((value) => {
-      console.log(value);
-    });
+  return getChuckJoke(category).then(function (joke) {
+    return joke.value;
   });
 }
 
